@@ -1,0 +1,187 @@
+/* Configurações do corpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e64545; /* Fundo vermelho natalino */
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Impede barras de rolagem */
+    position: relative;
+  }
+  
+  /* Fundo animado com neve */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Hyper-Realistic-Hyper-Detailed-Evil-Creepy-Horror-Santa-41998603-1.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -2; /* Fica atrás de tudo */
+    filter: brightness(0.7); /* Escurece um pouco a imagem para destacar elementos */
+  }
+  
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('vista-da-arvore-de-natal-lindamente-decorada-em-casa-scaled.jpg');
+    opacity: 0.5;
+    z-index: -1; /* Efeito de neve no fundo */
+    animation: snow-fall 10s linear infinite;
+  }
+  
+  /* Efeito de partículas flutuantes (neve) */
+  @keyframes snow-fall {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 100%;
+    }
+  }
+  
+  /* Cartão no centro */
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+  }
+  
+  .icons img {
+    width: 90px;
+    margin: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #e64545;
+  }
+  
+  p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e64545; /* Vermelho natalino */
+    height: 100vh;
+    overflow: hidden; /* Esconde qualquer elemento que ultrapasse os limites da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do cartão central */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative; /* Para permitir elementos dentro do cartão */
+}
+
+/* Estilo do conteúdo */
+.card-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+}
+
+/* As imagens animadas */
+.icons img {
+    width: 90px;
+    margin: 10px;
+    position: absolute; /* Para permitir a movimentação pelo fundo */
+    animation: move-around 10s linear infinite;
+}
+
+/* Cada imagem recebe uma animação com diferentes tempos e direções */
+.icons img:nth-child(1) {
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+
+.icons img:nth-child(2) {
+    animation-duration: 15s;
+    animation-delay: 2s;
+}
+
+.icons img:nth-child(3) {
+    animation-duration: 18s;
+    animation-delay: 4s;
+}
+
+.icons img:nth-child(4) {
+    animation-duration: 10s;
+    animation-delay: 6s;
+}
+
+.icons img:nth-child(5) {
+    animation-duration: 14s;
+    animation-delay: 8s;
+}
+
+.icons img:nth-child(6) {
+    animation-duration: 16s;
+    animation-delay: 10s;
+}
+
+/* Animação de movimento */
+@keyframes move-around {
+    0% {
+        transform: translate(0, 0); /* Posição inicial */
+    }
+    25% {
+        transform: translate(50vw, -20vh); /* Move para a direita e para cima */
+    }
+    50% {
+        transform: translate(-30vw, 30vh); /* Move para a esquerda e para baixo */
+    }
+    75% {
+        transform: translate(40vw, 10vh); /* Move para a direita e um pouco para cima */
+    }
+    100% {
+        transform: translate(0, 0); /* Volta à posição inicial */
+    }
+}
+
+/* Estilo dos textos */
+h1 {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #e64545;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
