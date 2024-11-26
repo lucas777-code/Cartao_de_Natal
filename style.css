@@ -84,27 +84,29 @@ body {
     line-height: 1.5;
   }
 
-  /* Estilos gerais */
+  /* Estilos gerais *//* Estilos gerais */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #e64545; /* Vermelho natalino */
     height: 100vh;
-    overflow: hidden; /* Esconde qualquer elemento que ultrapasse os limites da tela */
+    overflow: hidden; /* Esconde elementos que ultrapassam os limites da tela */
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; /* Define uma referência para os elementos posicionados */
 }
 
 /* Estilo do cartão central */
 .card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco semitransparente */
     border-radius: 15px;
     padding: 20px;
     width: 350px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    position: relative; /* Para permitir elementos dentro do cartão */
+    z-index: 2; /* Garantindo que o texto fique na frente das imagens */
+    position: relative;
 }
 
 /* Estilo do conteúdo */
@@ -115,12 +117,13 @@ body {
     color: #333;
 }
 
-/* As imagens animadas */
+/* As imagens animadas no fundo */
 .icons img {
     width: 90px;
-    margin: 10px;
-    position: absolute; /* Para permitir a movimentação pelo fundo */
+    position: absolute; /* Faz com que as imagens sejam posicionadas livremente */
     animation: move-around 10s linear infinite;
+    z-index: 1; /* Garante que as imagens fiquem atrás do texto */
+    opacity: 0.7; /* Torna as imagens semitransparentes */
 }
 
 /* Cada imagem recebe uma animação com diferentes tempos e direções */
